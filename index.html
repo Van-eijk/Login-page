@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="icons/css/all.css">
+        <link rel="stylesheet" href="style/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Login</h1>
+            <form action="">
+                <div class="pseudo">
+                    <span><i class="fa-solid fa-user"></i></span> <input type="text" placeholder="Pseudo">
+                </div>
+    
+                <div class="password">
+                    <span><i class="fa-solid fa-lock"></i></span> <input type="password" id="pwd" placeholder="Password"> <span class="iconPwd" onclick="viewPassword()"><i class="fa-solid fa-eye-slash" id="hidePwd"></i> <i class="fa-solid fa-eye" id="seePwd"></i></span>
+                </div>
+                <input type="submit" value="Login">
+            </form>
+           
+        </div>
+
+        <script>
+
+            // Afficher ou masquer le mot de passe
+
+            var seePassword = document.getElementById("seePwd");
+            var hidePassword = document.getElementById("hidePwd");
+            var view = true ;
+            
+            function viewPassword(){
+               if(view){
+                seePassword.style.display = "none";
+                hidePassword.style.display = "block";
+                document.getElementById("pwd").setAttribute("type","text");
+                view = false;
+               }else{
+                    seePassword.style.display = "block";
+                    hidePassword.style.display = "none";
+                    document.getElementById("pwd").setAttribute("type","password");
+                    view = true ;
+               }
+                //alert("hello");
+            }
+        </script>
+    </body>
+</html>
